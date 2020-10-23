@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/importexport/copernicus/locale/id_ID/locale.xml
+  *
+  * Copyright (c) 2013-2016 Simon Fraser University Library
+  * Copyright (c) 2003-2016 John Willinsky
+  * Copyright (c) 2020 Eko Didik Widianto
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the id_ID (Bahasa Indonesia) locale.
+  *
+  -->
+
+<locale name="id_ID" full_name="Bahasa Indonesia">
+
+    <message key="plugins.importexport.copernicus.displayName">Plugin Eksport ICIn</message>
+    <message key="plugins.importexport.copernicus.description">Eksport jurnal untuk Index Copernicus International (ICI) dan sediakan informasi metadata jurnal untuk pengindeksan</message>
+
+    <message key="plugins.importexport.copernicus.export">Export Data Jurnal untuk Index Copernicus International</message>
+    <message key="plugins.importexport.copernicus.export.issue">Eksport nomor terbitan</message>
+    <message key="plugins.importexport.copernicus.export.issue.Info">Eksport nomor yang dipilih atau satu nomor tunggal ke dalam file XML ICI. </message>
+    <message key="plugins.importexport.copernicus.export.issueInfo">Eksport nomor yang dipilih ke dalam XML</message>
+    <message key="plugins.importexport.copernicus.export.contact">Kontak ICI untuk pencantuman</message>
+    <message key="plugins.importexport.copernicus.export.contactInfo">Untuk menyarankan jurnal terindeks di ICI, register untuk mendapatkan username dan login, kelola informasi jurnal, dan kirimkan kuesioner evaluasi untuk dapat terindeks di basis data master jurnal ICI.</message>
+
+</locale>

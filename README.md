@@ -1,5 +1,5 @@
 # Copernicus Citation Index XML export plugin for OJS 2.4x
-This plug-in allows the journal manager to export articles' metadata as an XML file for Index Copernicus International (ICI). It follows the XML scheme from ICI (https://journals.indexcopernicus.com/ic-import.xsd).
+This plug-in allows the journal manager to export issues' metadata as an XML file for Index Copernicus International (ICI) indexing. It follows the XML scheme from ICI (https://journals.indexcopernicus.com/ic-import.xsd).
 
 This plugin is mainly developed for OJS 2.4.8x. However, It may work at other 2.4x OJS versions.
 
@@ -14,5 +14,3 @@ Once the XML file exported, follow the adding issues instruction through the ICI
 # Troubleshooting
 
 If some gone wrong, you can delete folder "copernicus" in OJS_DIR/plugins/importexport/
-
-Detailed instruction: 

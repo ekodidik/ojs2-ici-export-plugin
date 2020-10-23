@@ -15,3 +15,7 @@ Once the XML file exported, follow the importing issues instruction through the 
 
 Please create an issue if you find a bug in installing or generating XML file.
 To remove the plugin, you can delete folder "copernicus" in OJS_DIR/plugins/importexport/
+
+# Credits
+
+This plugin version is ported from https://github.com/a-vodka/ojs_copernicus_export_plugin. 

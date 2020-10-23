@@ -5,9 +5,9 @@ This plugin is mainly developed for OJS 2.4.8x. However, It may work at other 2.
 
 # Installation
 
-1. Download the latest release and save as tar.gz file;
+1. Download the latest release. Unzip the file and rename the extracted directory to copernicus. Compress the copernicus dirctory into copernicus.tar.gz;
 2. As a journal manager, Open Plugin Management > Install A New Plugin. You must have the privilege to install a new plugin from the OJS site administrator;
-3. Choose the downloaded file and click the Install button.
+3. Choose the copernicus.tar.gz file and click the Install button.
 
 Once the XML file exported, follow the adding issues instruction through the ICI the journal system from https://journals.indexcopernicus.com/api/download/issues_manual_en.pdf.
 

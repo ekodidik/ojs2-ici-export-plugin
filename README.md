@@ -13,4 +13,5 @@ Once the XML file exported, follow the importing issues instruction through the 
 
 # Troubleshooting
 
-If some gone wrong, you can delete folder "copernicus" in OJS_DIR/plugins/importexport/
+Please report an issue if you find a bug in installing or generating XML file.
+To remove the plugin, you can delete folder "copernicus" in OJS_DIR/plugins/importexport/

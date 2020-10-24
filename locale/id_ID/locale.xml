@@ -6,7 +6,7 @@
   *
   * Copyright (c) 2013-2016 Simon Fraser University Library
   * Copyright (c) 2003-2016 John Willinsky
-  * Copyright (c) 2020 Eko Didik Widianto
+  *
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the id_ID (Bahasa Indonesia) locale.
@@ -15,7 +15,7 @@
 
 <locale name="id_ID" full_name="Bahasa Indonesia">
 
-    <message key="plugins.importexport.copernicus.displayName">Plugin Eksport ICIn</message>
+    <message key="plugins.importexport.copernicus.displayName">Plugin Eksport ICI</message>
     <message key="plugins.importexport.copernicus.description">Eksport jurnal untuk Index Copernicus International (ICI) dan sediakan informasi metadata jurnal untuk pengindeksan</message>
 
     <message key="plugins.importexport.copernicus.export">Export Data Jurnal untuk Index Copernicus International</message>

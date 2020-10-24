@@ -6,7 +6,7 @@
   *
   * Copyright (c) 2013-2016 Simon Fraser University Library
   * Copyright (c) 2003-2016 John Willinsky
-  * Copyright (c) 2020 Eko Didik Widianto
+  *
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings
@@ -18,7 +18,7 @@
 	
 	<message key="plugins.importexport.copernicus.export">Export Journal Data to Index Copernicus International</message>
 	<message key="plugins.importexport.copernicus.export.issue">Export issues</message>
-    <message key="plugins.importexport.copernicus.export.issue.Info">Export selected issues or a single issue into the ICI XML file. </message>
+	<message key="plugins.importexport.copernicus.export.issue.Info">Export selected issues or a single issue into the ICI XML file. </message>
 	<message key="plugins.importexport.copernicus.export.issueInfo">Export selected issues in XML</message>
 	<message key="plugins.importexport.copernicus.export.contact">Contact ICI for inclusion</message>
 	<message key="plugins.importexport.copernicus.export.contactInfo">For your journal's consideration in the ICI, register to get username and login, manage journal's passport, and submit the evaluation questionnaire in order to be indexed in the ICI journals master list database..</message>

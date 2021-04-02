@@ -18,4 +18,4 @@ To remove the plugin, you can delete folder "copernicus" in OJS_DIR/plugins/impo
 
 # Credits
 
-This plugin version is ported from https://github.com/a-vodka/ojs_copernicus_export_plugin. 
+This plugin version was ported from https://github.com/a-vodka/ojs_copernicus_export_plugin. 

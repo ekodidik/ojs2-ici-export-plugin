@@ -35,10 +35,10 @@ class CopernicusExportDom {
 		// Records node contains all articles, each called a record
 		$records = XMLCustomWriter::createElement($doc, 'ici-import');
 
-       		$issn = $journal->getSetting('onlineIssn');
-        	$issn = $issn ? $issn : $journal->getSetting('printIssn');
+		$issn = $journal->getSetting('onlineIssn');
+		$issn = $issn ? $issn : $journal->getSetting('printIssn');
 
-        	$journal_elem = XMLCustomWriter::createChildWithText($doc, $records, 'journal', '', true);
+		$journal_elem = XMLCustomWriter::createChildWithText($doc, $records, 'journal', '', true);
         	XMLCustomWriter::setAttribute($journal_elem, 'issn', $issn);
 		
 		// retrieve selected issues
@@ -50,27 +50,27 @@ class CopernicusExportDom {
 			foreach($selectedIssues as $key => $selectedIssueId) {
 				$selectedIssue = $issueDao->getIssueById($selectedIssueId, $journalId);
 				if (!$selectedIssue) unset($selectedIssues[$key]);
-                // Issue node
-                $issue_elem = XMLCustomWriter::createChildWithText($doc, $records, 'issue', '', true);
-                $pub_issue_date = $selectedIssue->getDatePublished() ? date('Y-m-d', strtotime($issue->getDatePublished())) : '';
+				// Issue node
+				$issue_elem = XMLCustomWriter::createChildWithText($doc, $records, 'issue', '', true);
+				$pub_issue_date = $selectedIssue->getDatePublished() ? date('Y-m-d', strtotime($issue->getDatePublished())) : '';
 
-                XMLCustomWriter::setAttribute($issue_elem, 'number', $selectedIssue->getNumber());
-                XMLCustomWriter::setAttribute($issue_elem, 'volume', $selectedIssue->getVolume());
-                XMLCustomWriter::setAttribute($issue_elem, 'year', $selectedIssue->getYear());
-                XMLCustomWriter::setAttribute($issue_elem, 'publicationDate', $pub_issue_date, false);
+				XMLCustomWriter::setAttribute($issue_elem, 'number', $selectedIssue->getNumber());
+				XMLCustomWriter::setAttribute($issue_elem, 'volume', $selectedIssue->getVolume());
+				XMLCustomWriter::setAttribute($issue_elem, 'year', $selectedIssue->getYear());
+				XMLCustomWriter::setAttribute($issue_elem, 'publicationDate', $pub_issue_date, false);
                 
-                $num_articles = 0;
+				$num_articles = 0;
 
-                $pubArticles = $pubArticleDao->getPublishedArticles($selectedIssueId);
+				$pubArticles = $pubArticleDao->getPublishedArticles($selectedIssueId);
 
-                foreach ($pubArticles as $pubArticle) {
-                        $articleNode = CopernicusExportDom::generateArticleDom($doc, $journal, $selectedIssue, $section, $pubArticle);
+				foreach ($pubArticles as $pubArticle) {
+					$articleNode = CopernicusExportDom::generateArticleDom($doc, $journal, $selectedIssue, $section, $pubArticle);
 
-                        XMLCustomWriter::appendChild($issue_elem, $articleNode);
-                        $num_articles++;
-                }
-                XMLCustomWriter::setAttribute($issue_elem, 'numberOfArticles', $num_articles, false);
-                unset($issue_elem, $articleNode);
+					XMLCustomWriter::appendChild($issue_elem, $articleNode);
+					$num_articles++;
+				}
+				XMLCustomWriter::setAttribute($issue_elem, 'numberOfArticles', $num_articles, false);
+				unset($issue_elem, $articleNode);
 			}
 		}
 
@@ -85,12 +85,12 @@ class CopernicusExportDom {
 	  * @param $section object Section
 	  * @param $article object Article
 	  */
-    	function generateArticleDom($doc, $journal, $issue, $section, $article) {
+	function generateArticleDom($doc, $journal, $issue, $section, $article) {
 		$article_elem = XMLCustomWriter::createElement($doc, 'article');
 		XMLCustomWriter::createChildWithText($doc, $article_elem, 'type', 'ORIGINAL_ARTICLE');
-  
+
 		$locales = array_keys($article->_data['title']);
-		
+
 		/* --- Localized nodes --- */
 		foreach ($locales as $loc) {
 			$lc = explode('_', $loc);
@@ -100,7 +100,7 @@ class CopernicusExportDom {
 			/* --- Title and abstract --- */
 			XMLCustomWriter::createChildWithText($doc, $lang_version, 'title', $article->getLocalizedTitle($loc), true);
 			XMLCustomWriter::createChildWithText($doc, $lang_version, 'abstract', strip_tags($article->getLocalizedData('abstract', $loc)), true);
-            
+
 			/* --- FullText URL --- */
 			foreach ($article->getGalleys() as $galley) {
 				XMLCustomWriter::createChildWithText($doc, $lang_version, 'pdfFileUrl', Request::url(null, 'article', 'view', array($article->getId(),$galley->getId())));    
@@ -111,7 +111,7 @@ class CopernicusExportDom {
 				$publicationDate = date('Y-m-d', strtotime($article->getDatePublished()));
 			else
 				$publicationDate = date('Y-m-d', strtotime($issue->getDatePublished()));
-            		XMLCustomWriter::createChildWithText($doc, $lang_version, 'publicationDate', $publicationDate, false);
+			XMLCustomWriter::createChildWithText($doc, $lang_version, 'publicationDate', $publicationDate, false);
             
 			/** --- FirstPage / LastPage (from PubMed plugin)---
 			  * there is some ambiguity for online journals as to what
@@ -159,7 +159,7 @@ class CopernicusExportDom {
 			XMLCustomWriter::createChildWithText($doc, $author_elem, 'role', 'AUTHOR', true);
 			XMLCustomWriter::createChildWithText($doc, $author_elem, 'ORCID', $author->getData('orcid'), false);
 			
-			$index++;            
+			$index++;
 		}
 
 		/*--- Citation element ---*/

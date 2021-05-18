@@ -52,7 +52,7 @@ class CopernicusExportDom {
 				if (!$selectedIssue) unset($selectedIssues[$key]);
 				// Issue node
 				$issue_elem = XMLCustomWriter::createChildWithText($doc, $records, 'issue', '', true);
-				$pub_issue_date = $selectedIssue->getDatePublished() ? date('Y-m-d', strtotime($issue->getDatePublished())) : '';
+				$pub_issue_date = $selectedIssue->getDatePublished() ? date('Y-m-d', strtotime($selectedIssue->getDatePublished())) : '';
 
 				XMLCustomWriter::setAttribute($issue_elem, 'number', $selectedIssue->getNumber());
 				XMLCustomWriter::setAttribute($issue_elem, 'volume', $selectedIssue->getVolume());

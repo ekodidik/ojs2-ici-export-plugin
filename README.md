@@ -5,7 +5,7 @@ This plugin is mainly developed for OJS 2.4.8x. However, It may work in other 2.
 
 # Installation
 
-1. Download the latest release. Unzip the file and rename the extracted directory to copernicus. Compress the copernicus dirctory into copernicus.tar.gz;
+1. Download the latest release. Unzip the file and rename the extracted directory to copernicus. Compress the copernicus directory into copernicus.tar.gz;
 2. As a journal manager, Open Plugin Management > Install A New Plugin. You must have the privilege to install a new plugin from the OJS site administrator;
 3. Choose the copernicus.tar.gz file and click the Install button.
 
@@ -13,8 +13,13 @@ Once the XML file exported, follow the importing issues instruction through the 
 
 # Troubleshooting
 
-Please create an issue if you find a bug in installing or generating XML file.
+Please create an issue if you find a bug in installing, generating, and importing the XML file. Send the issue to didik@live.undip.ac.id.
 To remove the plugin, you can delete folder "copernicus" in OJS_DIR/plugins/importexport/
+
+# Upgrade
+This plugin has not supported upgrading yet. Please ensure you have the new installation file. Follow these steps to upgrade the plugin:
+1. Remove the old plugin
+2. Reinstall the new one
 
 # Credits
 

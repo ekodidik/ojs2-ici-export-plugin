@@ -52,7 +52,7 @@ class CopernicusExportDom {
 				if (!$selectedIssue) unset($selectedIssues[$key]);
                 // Issue node
                 $issue_elem = XMLCustomWriter::createChildWithText($doc, $records, 'issue', '', true);
-                $pub_issue_date = $selectedIssue->getDatePublished() ? str_replace(' ', "T", $selectedIssue->getDatePublished()) . 'Z' : '';
+                $pub_issue_date = $selectedIssue->getDatePublished() ? date('Y-m-d', strtotime($issue->getDatePublished()) : '';
 
                 XMLCustomWriter::setAttribute($issue_elem, 'number', $selectedIssue->getNumber());
                 XMLCustomWriter::setAttribute($issue_elem, 'volume', $selectedIssue->getVolume());
@@ -107,10 +107,10 @@ class CopernicusExportDom {
 			}
 
 			/* --- Article's publication date --- */
-			if ($article->getDatePublished()) 
-				$publicationDate = $article->getDatePublished() ? str_replace(' ', "T", $article->getDatePublished()) . 'Z' : '';
+			if ($article->getDatePublished()) 				
+				$publicationDate = date('Y-m-d', strtotime($article->getDatePublished()));
 			else
-				$publicationDate = $issue->getDatePublished() ? str_replace(' ', "T", $issue->getDatePublished()) . 'Z' : '';
+				$publicationDate = date('Y-m-d', strtotime($issue->getDatePublished()));
             		XMLCustomWriter::createChildWithText($doc, $lang_version, 'publicationDate', $publicationDate, false);
             
 			/** --- FirstPage / LastPage (from PubMed plugin)---
